@@ -1,0 +1,220 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+body{
+	padding: 50px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+
+.block {
+	border: 5px solid red;
+	max-width: 800px;
+	margin: 0px auto;  /*// параметр auto  элементы, ограниченные по ширине, 
+							//выставляет по центру*/
+	height: 1800px;	
+	position: relative; /* чтобы потомки позиционировались относительно этого div*/
+}
+
+
+.block div{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+}
+
+
+.block__1 {
+	background-color: #ece89d;
+}
+.block__2 {
+	background-color: #5e5373;
+/*	position: absolute; /*перестает быть блочным , при этом
+								если в родителе укзаано position:relative - то относительно родительского блока
+								если в родителе не указано relative, то относительно окна*/
+/*position: fixed; /*приклеивает к заданному положению   - родитель неважен*/ 
+position: sticky; /*сначала скролится, а вверху прилипает*/
+	top: 0px;
+	left: 0px;
+	width: 100%;
+/*	left: 50px;
+	right: 0;
+	top: 60px;
+	bottom: 0;
+	*/
+	z-index: 3;
+
+}
+.block__3 {
+	background-color: #18b5a4;
+	position: relative;
+	z-index: 0;
+}
+.block__4 {
+	background-color: #16fdd2;
+}
+
+.block__5 {
+	background-color: #e5a5ff;
+	position: sticky;
+	top: 0;
+	z-index: 4;
+}
+
+
+.block__6 {
+	background-color: blue;
+	width: 50%;
+	left: 0;
+	position: absolute;
+
+}
+.block__7 {
+	background-color: lightblue;
+	width: 50%;
+	right: 0;
+	position: absolute;
+
+}
+
+.block__8{
+	background-color: purple;
+	position: relative;
+
+	top:75px;
+	left: 20px;
+}
+
+
+
+
+
+.list{
+	font-size: 18px;
+	border: 1px solid #000;
+}
+
+.list li{
+	margin: 0 0 10px 0;
+/*	position: relative;*/
+	padding: 0 0 0 20px;
+}
+
+/*.list li:before{
+	content: '';
+	background: url('../img/icons/li.svg') 0 0 no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 3px;
+	left: 0;
+}
+*/
+.list li:before{
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+
+
+
+
+
+.list2{
+	margin: 40px 0 0 0;
+	font-size: 18px;
+	border: 1px solid #000;
+}
+
+.list2 li{
+	margin: 0 0 10px 0;
+	position: relative;
+	padding: 0 0 0 20px;
+}
+
+
+
+.list2 li:before{
+	content: '';
+	background: url('../img/icons/li.svg') 0 0 no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	top: 3px;
+}
+
+
+
+
+.block_1 {
+	background-color: #ece89d;
+
+}
+.block_2 {
+		background-color: #5e5373;
+		color: #fff;
+		position: absolute; /*относительно изначалной позиции в коде.*/
+		width: 100%;
+		bottom: 500px;
+		right: 30px;
+
+}
+.block_3 {
+	background-color: #18b5a4;
+	position: relative;
+	z-index: 2;
+
+}
+
+.block_4{
+	background-color: #16fdd2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.block_5{
+	background-color: #e5a5ff;
+	position: sticky;
+	top: 30px;
+}
+
+
+
+.block_6{
+	background-color: blue;
+	width: 50%;
+	left: 0;
+	position: absolute;
+
+}
+
+.block_7{
+	background-color: lightblue;
+	width: 50%;
+	right: 0;
+	position: absolute;
+}
